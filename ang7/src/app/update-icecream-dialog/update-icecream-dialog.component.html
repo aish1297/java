@@ -1,0 +1,39 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Edit Flavour</mat-card-title>
+  </mat-card-header>
+
+    <form class="update-form" [formGroup]="updateForm">
+            <mat-form-field >
+              <input matInput placeholder="Flavour Id"
+                     formControlName="flavour_id"
+                     required>
+              <mat-error>flavour Id required</mat-error>
+            </mat-form-field>
+
+            <mat-form-field >
+              <input matInput placeholder="Flavour Name"
+                    formControlName="flavour_name"
+                    required>
+              <mat-error>flavour Name is required</mat-error>
+            </mat-form-field>
+
+            <mat-form-field >
+              <input matInput placeholder="Price"
+                    formControlName="price"
+                    required>
+              <mat-error>Price is required</mat-error>
+            </mat-form-field>
+
+            <mat-dialog-actions>
+              
+              <button mat-raised-button
+              color="primary">Update Flavour</button>
+
+              <button mat-raised-button
+              color="primary"
+              (click)="cancelSelect()">Cancel</button>
+            </mat-dialog-actions>
+
+</form>
+</mat-card>
